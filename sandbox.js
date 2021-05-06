@@ -15,3 +15,10 @@ console.log(result);//returns NaN
 result = String(50); //converts it to a string
 console.log(result);
 console.log(typeof result);
+
+let html =``;
+people=['wajdan','phil','zhenia','mash'];
+people.forEach(element => {
+    //create an html template for each one
+    html+= `<li style ="color:red"> ${element} </li>`
+});

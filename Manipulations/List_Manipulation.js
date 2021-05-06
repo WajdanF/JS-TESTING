@@ -29,3 +29,9 @@ console.log(results,x);
 
 results = x.pop(); //removes the last elment and returns that element
 console.log(results);
+
+//foreach Loop
+
+x.forEach((i,X) => {
+    console.log(i,X);
+});
