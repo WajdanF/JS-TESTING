@@ -20,3 +20,12 @@ console.log(p.style.color);//grabbing color style
 
 p.style.margin='50px';//adding to previous style instead of overriding
 p.style.color='crimson';
+p.style.fontSize='60px'; //for anything with "-" use camel case 
+
+p.style.color="";//removes the property
+
+const para = document.querySelector('p')
+console.log(para.classList); //getting the class list
+
+para.classList.add('error');//adding error class to the p tag
+para.classList.remove('error');//removes the error class in the p tag
