@@ -1,0 +1,11 @@
+button {
+    display: block;
+    margin: 20px auto;
+    color: white;
+    border: 0;
+    padding: 6px 10px;
+}
+.popup-wrapper {
+    background-color: black;
+    opacity: 0.5;
+}
