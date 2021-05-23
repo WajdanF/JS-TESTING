@@ -36,3 +36,16 @@ getTodos((err, data)=>{
         console.log(data.length);
     }
 });
+
+//FETCH API
+fetch("wajdan.json").then((response)=>{//Rejection is only based on network error
+
+    console.log('resolved: ',response);
+    return response.json();//this is a promise
+})
+.then(data=>{
+    console.log('This is the data: ',data);
+})
+.catch((err)=>{
+    console.log("Rejected",err);
+});
