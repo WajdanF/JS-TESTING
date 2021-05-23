@@ -38,7 +38,7 @@ getTodos((err, data)=>{
 });
 
 //FETCH API
-fetch("wajdan.json").then((response)=>{//Rejection is only based on network error
+fetch("wajdan.json").then((response)=>{//Rejection is only based on network error, so set up checks
 
     console.log('resolved: ',response);
     return response.json();//this is a promise
