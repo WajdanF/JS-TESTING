@@ -30,3 +30,10 @@ const todos = [
 ];
 
 console.log(JSON.stringify(todos));
+
+localStorage.setItem('todos',JSON.stringify(todos)) //appending to local sotrage
+
+let stored = localStorage.getItem('todos');
+stored = JSON.parse(stored);
+
+console.log(stored);
