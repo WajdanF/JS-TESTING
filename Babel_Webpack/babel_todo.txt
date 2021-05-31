@@ -7,3 +7,17 @@ setup file called ".babelrc" with:
 }"
 
 To call babel do: "node_modules/.bin/babel 'filename' -o 'new_filename' "
+
+
+To make projects we first create a src folder which we write our own code in, then
+create a dist folder with the babel converted js
+
+TO MAKE BABEL FASTER:
+
+go to package.json, then scripts, then add "babel": "node_modules/.bin/babel src/index.js -o dist/assets/bundle.js" or whatever the script is.
+To run the script type in: npm run "script name" or in our case "babel", so it looks like "npm run babel"
+
+TO AUTOMATE THE PROCESS AND LOOK FOR CHANGES AUTOMATICALLY:
+use this script instead: "node_modules/.bin/babel 'filename' -w -o 'new_filename' "
+^ The -w wathes for changes in the previous file and automatically runs the script (when saved), but you do have to run the babel script first in the cmd
+
