@@ -16,4 +16,4 @@ const test = getTodos()
     })
     .catch((err) => {
         console.log("An error",err.message);//gives error message
-    }); //test is now a promsie
+    }); //test is now    a promsie
