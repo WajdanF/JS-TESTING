@@ -1,0 +1,9 @@
+use "npm init" first
+use "npm install @babel/core @babel/cli --save-dev"
+then use "npm install @babel/preset"
+setup file called ".babelrc" with:
+"{
+    "presets":["@babel/preset-env"]
+}"
+
+To call babel do: "node_modules/.bin/babel 'filename' -o 'new_filename' "
