@@ -1,0 +1,43 @@
+Make a file called "webpack.confi.js" and paste in: 
+"
+const path = require('path');//requiring a path/module from node
+
+module.exports = {
+    entry:'./src/index.js',//file we want (input almost) where the source file lives (relative path)
+
+    output: {//where we want to output to
+        path:path.resolve(__dirname,'dist/assets'),//__dirname gets the absolute path to the folder webpack.config is in
+        //resolve takes in 2 paths we want to combine (absolute path)
+
+        filename: 'bundle.js'//filename we save as
+    }
+
+};//exports a webpack config
+
+"
+
+Then install the webpack and webpack-cli by using "npm install webpack webpack-cli --save-dev" in the terminal in the folder with nodejs
+
+Then run the webpack by doing "node_modules/.bin/webpack" in the terminal (powershell)
+
+Then go to the package.json and make a new script called "webpack:node_modules/.bin/webpack" and
+to run it call "npm run webpack"
+
+
+TO USE  EXPORT AND IMPORT:
+If you want to use a function/anything in another file put "export" infront of it
+Then put import at the file you want it at like: "import {function names} from './export_file_location' "
+
+EASIER WAY TO EXPORT: put export at the very bottom of the file and then the functions like: "export {function names}"
+
+DEFAULT EXPORTS: At the bottom of the file write "export default (whatever)" and when importing it can be named anything like:
+"import (name) from './path' "
+only 1 default export per file
+
+To import deafult + regular do: "import (name for default),{name of export functions} from './path' " 
+
+To export deafult+regular EASIEST WAY: "export {name of regular exports, default_export as default}"
+
+
+To AUTOMATE IT AND WATCH FOR CHANGES use thes script: " "webpack": "node_modules/.bin/webpack -w" (added -w at the end)
+Press Crtl+C to cancel

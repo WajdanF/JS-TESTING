@@ -1,0 +1,11 @@
+Install the npm by doing: "npm install webpack-dev-server@(version number)"
+Next is to webpack.config.js and add to the module.exports: 
+    devServer:{
+        contentBase: path.resolve(__dirname,'dist'),//where the base directly is to uplaod to server (absoulte path)
+        //^ The folder where the index file is
+        
+        publicPath:'/assets/' //where the js is being served up from (the folder)
+    }
+
+
+Next is add script to package.json: "serve": "webpack-dev-server"
