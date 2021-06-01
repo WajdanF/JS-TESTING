@@ -1,11 +1,1 @@
-"use strict";
-
-var greet = function greet(name) {
-  console.log("".concat(name, " hello"));
-};
-
-greet('wajdan');
-greet('wajdan1');
-greet('wajadn2');
-greet('wajdan3');
-greet('wajdan4')
+(()=>{var e={171:()=>{console.log("dom file");const e=document.querySelector("body");e.style.background="grey",(o=>{const r=document.createElement("h1");r.textContent="Hello world from dom file",e.appendChild(r)})()}},o={};function r(t){var n=o[t];if(void 0!==n)return n.exports;var l=o[t]={exports:{}};return e[t](l,l.exports,r),l.exports}r.n=e=>{var o=e&&e.__esModule?()=>e.default:()=>e;return r.d(o,{a:o}),o},r.d=(e,o)=>{for(var t in o)r.o(o,t)&&!r.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:o[t]})},r.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),(()=>{"use strict";r(171),console.log("index file")})()})();

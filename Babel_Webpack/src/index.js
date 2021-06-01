@@ -1,7 +1,3 @@
-const greet = (name)=>{
-    console.log(`${name} hello`);
-}
-greet('wajdan');
-greet('wajdan1');
-greet('wajadn2');
-greet('wajdan33');
+import './dom';//runs the file but doesn't import it for use
+
+console.log('index file');

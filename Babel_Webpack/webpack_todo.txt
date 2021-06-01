@@ -1,0 +1,25 @@
+Make a file called "webpack.confi.js" and paste in: 
+"
+const path = require('path');//requiring a path/module from node
+
+module.exports = {
+    entry:'./src/index.js',//file we want (input almost) where the source file lives (relative path)
+
+    output: {//where we want to output to
+        path:path.resolve(__dirname,'dist/assets'),//__dirname gets the absolute path to the folder webpack.config is in
+        //resolve takes in 2 paths we want to combine (absolute path)
+
+        filename: 'bundle.js'//filename we save as
+    }
+
+};//exports a webpack config
+
+"
+
+Then install the webpack and webpack-cli by using "npm install webpack webpack-cli --save-dev" in the terminal in the folder with nodejs
+
+Then run the webpack by doing "node_modules/.bin/webpack" in the terminal (powershell)
+
+Then go to the package.json and make a new script called "webpack:node_modules/.bin/webpack" and
+to run it call "npm run webpack"
+
