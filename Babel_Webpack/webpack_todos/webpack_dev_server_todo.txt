@@ -8,4 +8,31 @@ Next is to webpack.config.js and add to the module.exports:
     }
 
 
-Next is add script to package.json: "serve": "webpack-dev-server"
+Next is add script to package.json: "serve": "webpack-dev-server" OR "serve": "webpack serve --open" if the first one does not work
+
+
+
+TO MAKE BUNDLE AND SPIT OUT CODE (BABEL AND WEBPACK TOGETHER):
+remove -w from the webpack script and add --mode production at the end
+next add the --mode development to the serve script
+
+Then install npm package: "npm install babel-loader --save-dev" to download the loader for babel
+
+Then go to the webpack.config.js and add this to the module.exports:
+ 
+ module:{
+        rules:[{//each object is a rule
+            test:/\.js$/, //anyfile that is a js file //which files we want to run through the lo   aders
+            exclude: /node_module/, //skips over the node_module
+            //^ js file that is not in nodemodule
+            
+            use:{
+                loader:'babel-loader',
+                options:{
+                    presets:['@babel/preset-env']
+                }
+            }
+        }]
+    }
+
+Then run "node_modules/.bin/webpack --mode production" in the terminal or "npm run webpack" 

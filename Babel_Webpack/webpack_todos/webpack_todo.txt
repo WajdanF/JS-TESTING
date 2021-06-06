@@ -1,4 +1,4 @@
-Make a file called "webpack.confi.js" and paste in: 
+Make a file called "webpack.config.js" and paste in: 
 "
 const path = require('path');//requiring a path/module from node
 
